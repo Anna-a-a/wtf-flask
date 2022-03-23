@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        <h4>И на Марсе будут яблони цвести!</h4>
+        <h2>Список профессий</h2>
+        {% set prof_list = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач',
+        'штурман', 'пилот дронов', 'метеоролог', 'климатолог'] %}
+        {% if list == "ul" %}
+            <ul>
+                {% for i in range(len(prof_list)) %}
+                <h1>prof_list[i]</h1>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <ol>
+                {% for prof in prof_list %}
+                <h1>prof</h1>
+                {% endfor %}
+            </ol>
+        {% endif %}
+    </body>
+</html>
